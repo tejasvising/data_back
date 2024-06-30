@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Saver</title>
+</head>
+<body>
+
+
+<form><div>
+  EMAIL FOR<br><input type="text" label="Email for" id="email"></div>
+  <div>
+    PASSWORD<br><input type="password" label="password" id="pass"></div>
+</form>
+<button type="submit" id="add">Add to List</button>
+<table>
+    <th>  </th>
+  <th>Email for</th>
+  <th>Password</th>
+  <tbody id="tableBody">
+  
+  <tr><td>Github</td>
+  <td>tejasvi@2001</td>
+<td id='ambience'>  </td></tr>
+  </tbody>
+</table>
+
+
+<script>
+  function getAndUpdate(e){
+       console.log("Updating List...");
+       email = document.getElementById('email').value;
+    console.log(email);
+       pass = document.getElementById('pass').value;
+
+
+   
+       if (localStorage.getItem('itemsJson')==null){
+           itemJsonArray = [];
+           itemJsonArray.push([email,pass]);
+           localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray))
+       }
+       else{
+           itemJsonArrayStr = localStorage.getItem('itemsJson')
+           itemJsonArray = JSON.parse(itemJsonArrayStr);
+           itemJsonArray.push([email,pass]);
+           localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray))
+           console.log("yeah");
+       }
+       
+      update();
+   }
+   function update(){
+       if (localStorage.getItem('itemsJson')==null){
+           itemJsonArray = []; 
+           localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray))
+       } 
+       else{
+           itemJsonArrayStr = localStorage.getItem('itemsJson')
+           itemJsonArray = JSON.parse(itemJsonArrayStr); 
+       }
+       // Populate the table
+       let tableBody = document.getElementById("tableBody");
+       let str = "";
+       itemJsonArray.forEach((element, index) => {
+           a=element[1].length;
+           stwr="#";
+           b=stwr.repeat(a);
+           console.log(b);
+           str += `
+           <tr>
+           <th scope="row" >${index + 1}</th>
+           <a id=${index+1}><td>${element[0]}</td></a>
+           <td>${b}</td> 
+   
+   
+           <td><button class="btn btn-sm btn-primary" onclick="deleted(${index})">Delete</button></td> 
+   <td><button class="btn btn-sm btn-primary" onclick="edited(${index})">Edit</button></td> 
+   <td><button class="btn btn-sm btn-primary" onclick="viewed(${index})">View</button></td> 
+   <td><button class="btn btn-sm btn-primary" onclick="hide(${index})">Hide</button></td> 
+           </tr>`;
+           console.log(element[1].length);}); 
+       
+       tableBody.innerHTML = str;
+       
+   }
+   add = document.getElementById("add");
+   add.addEventListener("click", getAndUpdate);
+   update();
+   function deleted(itemIndex){
+       console.log("Delete", itemIndex);
+       
+       itemJsonArrayStr = localStorage.getItem('itemsJson')
+    
+       itemJsonArray = JSON.parse(itemJsonArrayStr);
+       // Delete itemIndex element from the array
+       itemJsonArray.splice(itemIndex, 1);
+       localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray));
+       update();
+
+   }flag=0;
+   function viewed(itemIndex){
+    let tb= document.getElementById('tableBody');
+       itemJsonArrayStr=localStorage.getItem('itemsJson');
+       itemJsonArray=JSON.parse(itemJsonArrayStr);
+       console.log(itemJsonArray[itemIndex][1]);
+       tb.rows[itemIndex].cells[2].innerHTML = itemJsonArray[itemIndex][1];
+   }
+   function hide(itemIndex){
+    let tb= document.getElementById('tableBody');
+    a=itemJsonArray[itemIndex][1].length;
+    steer="#";
+    b=steer.repeat(a);
+    console.log(b);
+    tb.rows[itemIndex].cells[2].innerHTML = b;
+   }
+   
+   
+function edited(itemIndex){
+   let tb= document.getElementById('tableBody');
+   document.getElementById("email").value= tb.rows[itemIndex].cells[1].textContent;
+   document.getElementById("pass").value= tb.rows[itemIndex].cells[2].textContent;
+   
+   deleted(itemIndex);
+   update();
+
+}
+function updateRecord(itemJsonArray) {
+   let tb= document.getElementById('tableBody');
+tb.rows[0].cells[0].innerHTML = itemJsonArray.email;
+yo.cells[1].innerHTML = itemJsonArray.pass;
+
+}
+
+
+
+   function clearStorage(){
+       if (confirm("Do you areally want to clear?")){
+       console.log('Clearing the storage')
+       localStorage.clear();
+       update()
+       }
+   } 
+  // $('#suggestions').toggle();
+/*   $('body').on('click','#suggestions', function(){
+$('#suggestions').toggle();
+document.getElementById('.suggestions').style.visibility ='hidden'; 
+})
+*/
+
+///.forEach(function(element) {
+// if (element[1] == 'ID123') {
+//   console.log("lo ajj m kehta hu") //'one' will delete from array
+// }
+//})
+</script>
+</body></html>

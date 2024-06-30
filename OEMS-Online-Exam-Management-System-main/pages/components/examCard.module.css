@@ -1,0 +1,19 @@
+.cardNormal {
+  margin-bottom: 10px;
+  width: 60%;
+  border: 0.5px solid #cccccc;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  transition: 0.2s;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardNormal:hover {
+  box-shadow: -4px 0px 0px 0px #1890ff;
+  margin-left: 10px;
+  cursor: pointer;
+}

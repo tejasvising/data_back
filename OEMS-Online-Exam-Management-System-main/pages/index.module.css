@@ -1,0 +1,44 @@
+.indexpage {
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+
+.logo {
+  background-color: #4c036e;
+  min-width: 50px;
+  min-height: 100px;
+  pointer-events: none;
+}
+.logo:hover {
+  padding: 10px;
+}
+
+.button {
+  background-color: #eeeeee;
+  border: 1.5px solid #4c036e;
+  color: #4c036e;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition-duration: 0.5s;
+  font-family: helvetica;
+}
+.button:hover {
+  background-color: #4c036e;
+  color: white;
+  border: 1.5px solid #4c036e;
+}

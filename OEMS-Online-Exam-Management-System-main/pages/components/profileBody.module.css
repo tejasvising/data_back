@@ -1,0 +1,38 @@
+.profileBody {
+  margin-top: 90px;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profileHeader {
+  margin-top: 25px;
+  margin-bottom: 0px;
+  width: 50%;
+  height: 90px;
+  border: 0.5px solid #cccccc;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(#0e5496, #1890ff);
+  position: relative;
+}
+
+.myImage {
+  margin-left: 0px;
+  position: relative;
+  top: -60px;
+  border: 5px solid #fafafa;
+  border-radius: 100px;
+  z-index: 1;
+}
+.myImage img {
+  border-radius: 100px;
+}

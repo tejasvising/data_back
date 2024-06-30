@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Contact Us
+    </title>
+    <link rel="stylesheet" href="stylec.css">
+</head>
+
+<body>
+    <h1>Contact Us</h1>
+    <h2><center><b>Contact Us</b></center></h2>
+    <h1>Contact Us</h1>
+    <div class="overall">
+        <div class="connect"> <h4>XYZ Healthcare Ltd.</h4>
+    
+  Tower A, Unitech Business Park<br>
+    Block-F,South City 1, Sector-41<br>
+    Gurgaon, Haryana-122001<br>
+    Contact Numbers-+91 1234693865, +91 1236492345<br>
+    Fax number- +91 1238527643<br>
+    For general/business related queries contact:<br>
+    xyz@abc.com
+</div>
+
+   
+   
+   
+<div class="container">
+    
+        <div class="heading">
+      <h4 class="feed">Feedback Form </h4>
+      <h4 class="query">Queries Form</h4></div><br>
+      
+       <!--<p>Required fields are marked with *</p>-->
+    <!--<h2>Contact information</h2>-->
+    <div class="contains">
+    <div class="container1">
+        <form action="">
+     <p><input type="text" name="name" required placeholder="Your full name"></p>
+     
+        <!--<legend></legend>-->
+        <p> Male<input type="radio" name="gender" id="male" required>&nbsp;&nbsp;&nbsp;&nbsp;Female<input type="radio" name="gender" id="female" required></p>
+       
+    <p><input type="email" name="email" required placeholder="Valid Email Address"></p>
+    <p><textarea name="message" id="message" cols="100" rows="8" placeholder="Your Message to Us"></textarea></p>
+    <p><textarea type="number" name="Contact Number" id="subject" cols="100" rows="1" placeholder="Contact Number"></textarea></p>
+   <center> <input type="submit" value="Send"></center>
+    </form></div>
+    
+    
+       
+            
+        
+           <!--<p>Required fields are marked with *</p>-->
+        <!--<h2>Contact information</h2>-->
+        <div class="container2">
+            <form action="">
+         <p><input type="text" name="name" required placeholder="Your full name"></p>
+         
+            <!--<legend></legend>-->
+            <p> Male<input type="radio" name="gender" id="male" required>&nbsp;&nbsp;&nbsp;&nbsp;Female<input type="radio" name="gender" id="female" required></p>
+           
+        <p><input type="email" name="email" required placeholder="Valid Email Address"></p>
+        <p><textarea name="message" id="message" cols="100" rows="8" placeholder="Your Query"></textarea></p>
+        <p><textarea type="number" name="Contact Number" id="subject" cols="100" rows="1" placeholder="Contact Number"></textarea></p>
+       <center> <input type="submit" value="Send"></center>
+        </form>
+        </div></div>
+    </div>
+
+</div>
+<script>
+    container1=document.querySelector('.container1');
+    container2=document.querySelector('.container2');
+    feedback=document.querySelector('.feed');
+    query=document.querySelector('.query');
+   function toggleOpen(e){
+console.log(this.classList);
+if(this.classList[0]=='feed'){
+    container1.classList.remove('close');
+    container1.classList.add('open');
+    container2.classList.remove('open');
+}
+if(this.classList[0]=='query'){
+container2.classList.toggle('open')
+container1.classList.remove('open');
+container1.classList.add('close');
+}}
+    
+    feedback.addEventListener('click', toggleOpen);
+    query.addEventListener('click', toggleOpen);
+</script>
+    </body></html>

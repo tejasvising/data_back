@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    padding: 0;
+   
+    background: #7A419B;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #7c1599 0%,#921099 48%,#7e4ae8 100%);
+    background-size: cover;
+  
+  }
+h1{
+   
+    border-color: black;
+    color:white;
+    background:white;
+}
+h2{
+    color:white;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.overall{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex:1;
+}
+.heading{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+h4{
+    font-size:1.5rem;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.connect{
+    font-size: 1rem;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height:1.8;
+   
+}
+
+
+
+    ::placeholder { 
+      color:  #006994;
+      opacity: 1; 
+    }
+    
+    .container{
+display:flex;
+flex-direction: column;
+justify-content: space-between;
+    width: 500px;
+    padding-right: 50px;
+    border:none;
+    border-radius: 4px;}
+    .contains{
+        display:flex;
+        flex-direction:row;
+        flex:1;
+    }
+    .container1{
+        
+        flex:5;
+    }
+
+  .container1.close{
+      flex:0;
+      transform:translateY(-500%);
+  }
+    
+.container2{
+
+   flex:0;
+    transform: translateY(-500%);
+}
+.container2.open{
+    flex:5;
+   
+    transform:translateY(0);
+}
+   .container1.open{
+       transform:translateY(0);
+   }
+    input[type="text"],
+    input[type="email"],
+    
+    select,
+    textarea{
+    font-family: "Brush Script MT","Lucida Handwriting",Cursive;
+    font-size: 20px;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    color: #006994;
+    padding: 12px;
+    border:none;
+    border-bottom: 2px solid  #006994;
+    border-radius: 5px;
+    margin: 10px;
+    }
+    textarea{
+    font-size: 20px;
+    }
+    input[type="submit"]{
+    background-color: #006994;
+    color: white;
+    padding-left:2px;
+  padding:12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+ 
+    }
+    input[type="submit"]:hover{
+    background-color: #4daea1;
+    }
+

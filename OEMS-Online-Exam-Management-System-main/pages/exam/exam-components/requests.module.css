@@ -1,0 +1,17 @@
+.requests {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 20px 20px 20px;
+}
+
+.singleRequest {
+  display: flex;
+  flex-direction: row;
+}
+
+.myImage {
+  margin: 5px 15px 0px 0px;
+}
+.myImage img {
+  border-radius: 50px;
+}

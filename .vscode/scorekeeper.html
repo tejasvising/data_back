@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head><title>Score Keeper</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+  <style>
+    body{
+      background-color:rgba(29, 36, 59, 0.623);
+    }
+    .h1{
+      align-content: center;
+      align-self: center;
+      align-items: center;
+    }
+    #dropdown{
+      border-radius: 95%;
+      border-color: aqua;
+    }</style>
+  <center><h1>Score Keeper</h1></center>
+  <br>
+  <br>
+   <center> <h1><span id="p1score">0</span> to <span id="p2score">0</span></h1></center>
+   <br>
+   <br>
+    <center><b>Playing to</b> <span id='dropdown'><select name="" id="playto">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select></span>
+    <button class="btn btn-info" id="p1btn">Player1</button>
+    <button id="p2btn" class='btn btn-info'>Player2</button>
+    <button id="res" class='btn btn-info'>Reset</button></center>
+    <script src="app.js"></script>
+</body>
+</html>
+
